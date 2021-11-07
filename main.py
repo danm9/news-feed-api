@@ -19,6 +19,5 @@ def get_news_api_testing():
 def get_news_api_headlines():
     return {'news': newsapiAPI.news_api_headlines_data}
 
-
 if __name__ == '__main__':
     app.run(debug=True)
