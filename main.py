@@ -6,6 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
+@cross_origin()
 def index():
     return '<h1>This API is for Dan to get news from multiple resources</h1>'
 
