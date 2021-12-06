@@ -48,10 +48,8 @@ business_category = "category=business"
 news_api_tech_api = '{}{}?{}&{}&{}&{}'.format(url, slug, country, tech_category, page_size, key)
 response = requests.get(news_api_tech_api)
 news_api_tech_data = response.json()
-print(news_api_tech_api)
 
 # Business API
 news_api_business_api = '{}{}?{}&{}&{}&{}'.format(url, slug, country, business_category, page_size, key)
 response = requests.get(news_api_business_api)
 news_api_business_data = response.json()
-print(news_api_business_api)
