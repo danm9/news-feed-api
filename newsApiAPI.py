@@ -12,7 +12,7 @@ col1 = db["keys"]
 col2 = db["apis"]
 
 # key for api
-find_api_key = col1.find_one()
+find_api_key = col1.find_one({"source": "newsAPI"})
 key = find_api_key['apiKey']
 # print(key)
 
