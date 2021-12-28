@@ -35,6 +35,5 @@ def get_news_api_business():
 def get_stocks_data():
     return {'data': stocksAPI.stocks_data_api}
 
-
 if __name__ == '__main__':
     app.run(debug=True)
