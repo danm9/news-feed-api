@@ -1,6 +1,7 @@
 import requests
 from datetime import date, timedelta, datetime
 import pymongo
+import json
 
 client = pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.9x3sx.mongodb.net/NewsApp?retryWrites=true&w=majority")
 
@@ -30,10 +31,10 @@ ticker_list = []
 for x in col2.find({}, {"ticker": 1}):
   ticker_list.append(x["ticker"])
 
-if response_data["resultsCount"] == 0:
-  stocks_data_api =[{
-    "resultsCount": 0,
-  }]
+if response_data['resultsCount'] == 0:
+  stocks_data_api = [
+    {'resultsCount': 0}
+  ]
 else:
   stocks_data = []
   for x in response_data["results"]:
@@ -41,4 +42,4 @@ else:
       if x["T"] == y:
         stocks_data.append(x)
   stocks_data_api = stocks_data
-print(stocks_data)
+print(stocks_data_api)
