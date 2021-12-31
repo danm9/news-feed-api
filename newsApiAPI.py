@@ -38,6 +38,10 @@ for x in col2.find({}, {"page": 1, "slug": 1, "sources": 1, "q": 1, "_id": 0}):
     news_api_sports_api = url_string
     response = requests.get(news_api_sports_api)
     news_api_sports_data = response.json()
+  elif x['page'] == 'investing':
+    news_api_investing_api = url_string
+    response = requests.get(news_api_investing_api)
+    news_api_investing_data = response.json()
 
 slug = "top-headlines"
 country = "country=us"
