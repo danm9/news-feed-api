@@ -30,6 +30,11 @@ def get_news_api_tech():
 def get_news_api_business():
     return {'news': newsApiAPI.news_api_business_data}
 
+@app.route('/news_api_investing')
+@cross_origin()
+def get_news_api_investing():
+    return {'news': newsApiAPI.news_api_investing_data}
+
 @app.route('/stocks_data')
 @cross_origin()
 def get_stocks_data():

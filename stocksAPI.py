@@ -42,4 +42,4 @@ else:
       if x["T"] == y:
         stocks_data.append(x)
   stocks_data_api = stocks_data
-print(stocks_data_api)
+# print(stocks_data_api)
